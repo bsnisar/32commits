@@ -1,0 +1,38 @@
+
+**DDDitify: Managing Complexity in Growing Projects**
+
+As projects expand, they often become exponentially more complex. However, as lead developers, our primary objective is to manage this complexity and ensure its growth remains linear, or at least predictable.
+
+A classic example of this complexity is relational database schemas. While normalization and relational databases are undeniably foundational in software development, they can sometimes become a hindrance, and not just in terms of performance.
+
+**Example 1:** Consider a system that integrates with various external domains, such as a payment gateway that collaborates with multiple payment providers, banks, and so forth. Each integration is a unique narrative, with distinct requirements and challenges. Attempting to normalize and create relational tables for each scenario can lead to an overwhelming complexity, making any modifications to the project a daunting task. This often results in developers feeling overwhelmed and frustrated.
+
+**Example 2:** Envision a Point-of-Sale (POS) system that integrates with another system responsible for pricing, promotions, and returns. Storing all the data computed by the pricing service as normalized relations can escalate the complexity within a few iterations. This complexity arises from the need to store the context of all prices and promotions applied at the time of the transaction. Consequently, the POS system becomes tightly intertwined with the pricing system, blurring the boundaries between the two.
+
+To address these challenges, one approach is to store the extensive structure as JSON in the database, extracting only the necessary fields for indexing and defining clear bounded contexts between entities.
+
+```sql
+create table operations(
+	id uuid not null primary key,
+	ref_id varchar not null,
+	state varchar(25) not null,
+	revision bigint not null,
+	schema bigint not null,
+	data json not null
+);
+```
+
+At first glance, this might resemble a NoSQL approach, but it's rooted in a relational database system. Here's why:
+
+- **Joins:** The concept encourages the separation of vital properties into columns, which can then be used for joins.
+- **Transactions and Locks:** Even though the table stores intricate domain entities as a JSON blob, it remains a table, ensuring the benefits of ACID properties and other relational database features.
+- **Consistency:** The system still offers all the consistency guarantees that a standard relational database provides.
+- **Data Security:** There's the added advantage of encrypting and signing data, crucial for safeguarding sensitive content and ensuring compliance.
+
+**Benefits:**
+
+1. **Flexibility:** This approach offers the flexibility of NoSQL databases while retaining the robustness of relational databases.
+2. **Scalability:** It allows for easier scaling as the project grows, without the complexities of traditional normalization.
+3. **Clear Boundaries:** By defining bounded contexts, it ensures that different systems or modules remain decoupled, promoting modular and maintainable code.
+
+In conclusion, as projects grow, it's essential to adopt strategies that manage complexity effectively. By combining the strengths of both relational and NoSQL databases, developers can ensure that their projects remain scalable, maintainable, and efficient.
