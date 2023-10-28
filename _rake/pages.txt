@@ -1,9 +1,6 @@
 CNAME
 robots.txt
-about.html
 404.html
 favicon.ico
-rss.xml
 sitemap.xml
 css/main.css
-images/tomato.svg

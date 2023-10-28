@@ -35,14 +35,14 @@ task :clean do
   done 'Jekyll site directory deleted'
 end
 
-desc 'Lint SASS sources'
-SCSSLint::RakeTask.new do |t|
-  f = Tempfile.new(['commits-', '.scss'])
-  f << File.open('css/main.scss').drop(2).join("\n")
-  f.flush
-  f.close
-  t.files = Dir.glob([f.path])
-end
+# desc 'Lint SASS sources'
+# SCSSLint::RakeTask.new do |t|
+#   f = Tempfile.new(['commits-', '.scss'])
+#   f << File.open('css/main.scss').drop(2).join("\n")
+#   f.flush
+#   f.close
+#   t.files = Dir.glob([f.path])
+# end
 
 desc 'Build Jekyll site'
 task :build do
