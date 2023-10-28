@@ -1,0 +1,53 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
+  itemscope="" itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords | join:', ' | xml_escape }}" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="/about.html">
+          <img src="/images/tomato.svg" class="photo" alt="tomato" itemprop="image"/>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="{{ "/rss.xml" | prepend: site.baseurl }}">RSS</a></li>
+            <li><a href="mailto:me@37commits.com">me@37commits.com</a></li>
+          </ul>
+        </nav>
+        <form method="get" action="https://www.google.com/search">
+          <input name="sitesearch" value="37commits.com" type="hidden"/>
+          <input type="text" name="q" placeholder="Search" autocomplete="off" size="30"/>
+        </form>
+      </header>
+      {{ content }}
+      <footer>
+        (c)
+        <span itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="name">Bohdan Snisar</span>
+        </span>
+        <br/>
+        2023
+      </footer>
+    </section>
+    <script>
+
+    </script>
+  </body>
+</html>
