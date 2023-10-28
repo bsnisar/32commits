@@ -17,24 +17,8 @@ layout: compress
     <section>
       <header>
         <a href="/about.html">
-          <img src="/images/tomato.svg" class="photo" alt="tomato" itemprop="image"/>
+          <img src="/images/logo.png" class="photo" alt="logo" itemprop="image"/>
         </a>
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <ul>
-            <li><a href="{{ "/rss.xml" | prepend: site.baseurl }}">RSS</a></li>
-            <li><a href="mailto:me@37commits.com">me@37commits.com</a></li>
-          </ul>
-        </nav>
-        <form method="get" action="https://www.google.com/search">
-          <input name="sitesearch" value="37commits.com" type="hidden"/>
-          <input type="text" name="q" placeholder="Search" autocomplete="off" size="30"/>
-        </form>
       </header>
       {{ content }}
       <footer>

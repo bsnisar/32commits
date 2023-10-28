@@ -18,6 +18,10 @@ exclude:
   - Rakefile
   - LICENSE.txt
   - builder.Dockerfile
+collections:
+  commits:
+    output: true
+    permalink: /:collection/:name
 
 plugins:
   - jekyll-feed
