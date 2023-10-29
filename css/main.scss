@@ -2,3 +2,48 @@
 ---
 
 @import 'defs';
+@import 'header';
+
+
+body {
+    background-color: $backgroud;
+
+}
+
+// Header and brand
+header {
+    min-height: 3.25rem;
+    position: relative;
+    z-index: 30;
+
+    img {
+        width: 3.25rem;
+    }
+}
+
+
+// Commits 
+.commits {
+    .commit {
+        margin-bottom: 10px;
+
+        &::before {
+            content: '* ';
+            font-weight: bold;
+            color: #007acc;
+        }
+
+        .commit_message {
+            font-weight: bold;
+        }
+
+        .commit_author {
+            font-style: italic;
+        }
+
+        .commit_timestamp {
+            font-size: 0.8em;
+            color: #777;
+        }
+    }
+}
