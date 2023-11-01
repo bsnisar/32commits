@@ -1,0 +1,43 @@
+
+@import 'defs';
+
+
+main {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (orientation: landscape) {
+        max-width: 760px;
+        padding-bottom: 80px;
+    }
+
+    @media only screen and (orientation: portrait) {
+        max-width: 92%;
+        padding-bottom: 80px;
+    }
+}
+
+article {
+    h1 {
+        padding-bottom: 0.3em;
+        font-size: 2em;
+        border-bottom: 1px solid #eee;
+        border-color: #cdcdcd;
+        margin-bottom: 7px;
+    }
+}
+
+center {
+    display: flex;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }

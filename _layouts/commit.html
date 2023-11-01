@@ -20,17 +20,12 @@ layout: default
       <meta itemprop="width" content="250"/>
     </div>
   </div>
-
+  <p>
+    <span itemprop="datePublished dateModified" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </span>
+  </p>
   <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
-  <center>
-    <small>
-      <span itemprop="datePublished dateModified" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </span>
-    </small>
-  </center>
-
-
   {{ content }}
 </article>
 

@@ -8,20 +8,18 @@ keywords:
   - 37 commits
 ---
 
-<section class="commits">
+<article class="commits">
   <ul>
     {% for post in site.commits %}
-    <li class="single_commit">
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        <dl>
-          <dt>{{ post.num }}.</dt>
-          <dd>{{ post.excerpt  }}</dd>
-        </dl>
-      </a>
-    </li>    
+      <li class="commit">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <span class="commit_hash">098e626</span> - 
+          <span class="commit_message">{{ post.title }}</span>
+        </a>
+      </li>
     {% endfor %}
   </ul>
-</section>
+</article>
 
 
 

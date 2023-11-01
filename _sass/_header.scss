@@ -1,12 +1,38 @@
 
-
 header {
     min-height: 3.25rem;
     position: relative;
     z-index: 30;
+    margin-bottom: 4rem;
 
     img {
         width: 3.25rem;
     }
-
 }
+
+nav {
+    text-align: center;
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin-left: 9px;
+            margin-right: 9px;
+            vertical-align: middle;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+
+    }
+}
+

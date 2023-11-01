@@ -2,35 +2,49 @@
 ---
 
 @import 'defs';
+@import 'reset';
+@import 'layout';
 @import 'header';
+@import 'grid';
 
 
 body {
-    background-color: $backgroud;
-
-}
-
-// Header and brand
-header {
-    min-height: 3.25rem;
-    position: relative;
-    z-index: 30;
-
-    img {
-        width: 3.25rem;
-    }
+    background-color: #fff;
 }
 
 
 // Commits 
 .commits {
+
+    // article {
+    //     margin: 7.4em $spacing 4.5em $spacing;
+    //     @media (min-width: 64rem) {
+    //         margin-top: calc(max(22.2vh, 5.4em));
+    //     }
+    // }
+
+    // center {
+    //     margin: 7.4em $spacing 4.5em $spacing;
+    // }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
     .commit {
+        font-size: 1.6255rem;
         margin-bottom: 10px;
+        display: block;
+        letter-spacing: -0.01em;
+        pointer-events: auto;
+        text-decoration: none;
+        
 
         &::before {
             content: '* ';
-            font-weight: bold;
-            color: #007acc;
+            // font-weight: bold;
+            // color: #007acc;
         }
 
         .commit_message {
@@ -42,7 +56,7 @@ header {
         }
 
         .commit_timestamp {
-            font-size: 0.8em;
+            // font-size: 0.8em;
             color: #777;
         }
     }
