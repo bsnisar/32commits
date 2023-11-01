@@ -36,4 +36,3 @@ gem 'scss_lint', '0.60.0'
 gem 'trollop', '2.9.9'
 gem 'uuidtools', '2.2.0'
 gem 'w3c_validators', '1.3.7'
-

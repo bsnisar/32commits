@@ -4,4 +4,3 @@ robots.txt
 favicon.ico
 sitemap.xml
 css/main.css
-2014/09/10/anti-patterns-in-oop.html
