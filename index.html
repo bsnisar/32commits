@@ -8,17 +8,17 @@ keywords:
   - 37 commits
 ---
 
-<article class="commits">
-  <ul>
+<article class="commits commits--index">
     {% for post in site.commits %}
-      <li class="commit">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <span class="commit_hash">098e626</span> - 
-          <span class="commit_message">{{ post.title }}</span>
+      <div class="elem">
+        <a href="{{ post.url | prepend: site.baseurl }}" >
+          <dl>
+              <dt>00</dt>
+              <dd>{{ post.title }}</dd>
+          </dl>
         </a>
-      </li>
+      </div>
     {% endfor %}
-  </ul>
 </article>
 
 

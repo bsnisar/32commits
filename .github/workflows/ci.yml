@@ -1,12 +1,6 @@
 ---
 name: jekyll
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [workflow_call]  # allow this workflow to be called from other workflows
 jobs:
   jekyll:
     name: jekyll
