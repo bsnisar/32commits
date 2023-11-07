@@ -9,7 +9,6 @@ env:
 
 jobs:
   deploy_docs:
-    if: "!contains(github.event.commits[0].message, '[ci skip]')"
     needs: jekyll
     runs-on: 'ubuntu-latest'
     env:
