@@ -9,7 +9,7 @@ jobs:
   verify:
     uses: ./.github/workflows/ci.yml
   deploy:
-    needs: [jekyll]
+    needs: [verify]
     if: "!contains(github.event.commits[0].message, '[ci skip]')"
     runs-on: 'ubuntu-latest'
     env:
