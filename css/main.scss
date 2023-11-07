@@ -74,7 +74,7 @@ header {
     }
 }
 
-// Index.html
+// index.html
 
 .commits {
     margin: 7.4em var(--spacing) 4.5em var(--spacing);
@@ -120,4 +120,25 @@ header {
 .elem dl dt {
     font-feature-settings: 'ss02', 'tnum';
     width: 2.8ch;
+}
+
+
+// single post 
+
+.commits--post {
+    margin: 3.4em auto;
+    width: 95%;
+
+    h1 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    color: var(--color-white);
+}
+
+@media (min-width: 64em) and (hover: hover) and (pointer: fine) {
+    .commits--post {
+        margin: 0 auto;
+        width: 50%;
+    }
 }
